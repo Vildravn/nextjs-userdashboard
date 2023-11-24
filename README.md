@@ -1,40 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Basic User Dashboard in Next.js
 
-## Getting Started
+## Overview
+This project represents a basic user dashboard within an admin panel, developed using Next.js. Users can be listed, and their details can be edited from this dashboard.
 
-First, run the development server:
+## Installation
+Follow these steps to install the project:
+1.	Clone the repository.
+2.	Use `npm install` in the project directory to install the necessary dependencies.
+3.	Start the development server with `npm run dev`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Running the Application
+After starting the development server, head to ﻿localhost:3000 in your browser to view the user dashboard.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development Tasks
+Here are specific tasks to be implemented in this project:
+1.	**User Listing**: On the dashboard, display a list of users using the `<User user={user}>` component.
+2.	**User Editing**: Add an 'Edit' button to the `<User user={user}>` component. Clicking this button should redirect to the user edit page at `/edit/:id`.
+3.	**User Edit Page**: This page can be accessed at `/edit/:id`. It should consist of a prefilled form with the following fields:
+  - Name
+  - Username
+  - Email
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+After the form submission, the data should not be sent to a server. Instead, it should appear as a JSON object in the console.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Through these tasks, this project allows for the exploration of basic CRUD functionality in Next.js leveraging components, routing, and form handling.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Information
+This project uses https://jsonplaceholder.typicode.com/ to simulate a REST API. The data is fetched using the `getStaticProps` function in `pages/index.js`. The `User` component is located in `components/User.js`. The `UserEdit` component is located in `components/UserEdit.js`. The `UserEdit` page is located in `pages/edit/[id].js`.
