@@ -7,6 +7,7 @@ const User = ({ user }) => {
   return (
     <div className={styles.wrapper}>
       {user.name} - {user.email}
+      <Link href={`/edit/${user.id}`}>Edit</Link>
     </div>
   )
 }
