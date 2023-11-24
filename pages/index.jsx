@@ -5,9 +5,9 @@ import PrimaryLayout from '@/layout/Primary'
 export default function Home ({ users }) {
   return (
     <>
-      <pre>
-        {JSON.stringify(users, true, 2)}
-      </pre>
+      {users.map((user) => (
+        <User user={user} />
+      ))}
     </>
   )
 }
